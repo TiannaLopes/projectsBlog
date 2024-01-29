@@ -7,7 +7,7 @@ const BlogItem = ({blog, content}) => {
   return (
     <div className='blogItem-wrap' key={blog.title}>
       <img className='blogItem-cover' src={blog.featured_image} alt='cover' />
-      <Chip label={blog.tags[0].name} />
+      <Chip label={blog?.tags[0]?.name} />
       <h3>{blog.title}</h3>
       <p className='blogItem-desc'>{blog.summary}</p>
       <footer>
