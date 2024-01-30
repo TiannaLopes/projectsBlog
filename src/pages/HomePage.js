@@ -3,19 +3,17 @@ import EmptyList from "../components/EmptyList";
 import BlogList from "../components/BlogList";
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
-import { blogList, CreatePost } from "../config/Api.js";
+import blogsData from '../data/blogs.json';
 
 const HomePage = ({ data }) => {
   const [blogs, setBlogs] = useState([]);
   const [searchKey, setSearchKey] = useState("");
   
   // get content from buttercms
-  useEffect(() => {
-    blogList().then((res) => {
-      console.log(res);
-      setBlogs(res);
-    });
-  }, []);
+useEffect(() => {
+  setBlogs(blogsData);
+}, []);
+
 
   // Search submit
   const handleSearchBar = (e) => {
@@ -24,20 +22,17 @@ const HomePage = ({ data }) => {
   };
 
   // Search for blog by category
-  const handleSearchResults = () => {
-    const filtered = blogs.filter((blog) => {
-      return blog.tags[0].name.toLowerCase().includes(searchKey.toLowerCase());
-    });
-    setBlogs(filtered);
-  };
-
+const handleSearchResults = () => {
+  const filtered = blogsData.filter((blog) =>
+    blog.title.toLowerCase().includes(searchKey.toLowerCase())
+  );
+  setBlogs(filtered);
+};
   // Clear search and show all blogs
-  const handleClearSearch = () => {
-    blogList().then((res) => {
-      setBlogs(res);
-    })
-    setSearchKey("");
-  };
+const handleClearSearch = () => {
+  setBlogs(blogsData);
+  setSearchKey("");
+};
 
   // function to get selected blog content
   const BlogContent = (id) => {
