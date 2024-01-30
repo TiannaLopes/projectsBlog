@@ -4,6 +4,9 @@ import '../index.css';
 
 
 const BlogList = ({ blogs, content }) => {
+   if (!blogs || blogs.length === 0) {
+    return null;
+  }
   return (
     <div className='blogList-wrap'>
       {blogs.map((blog) => (

@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import Chip from './Chip';
 import '../index.css';
 
-const BlogItem = ({blog, content}) => {
+const BlogItem = ({ blog, content }) => {
+     if (!blog || !content ) {
+    return null;
+  }
   return (
     <div className='blogItem-wrap' key={blog.title}>
       <img className='blogItem-cover' src={blog.featured_image} alt='cover' />
