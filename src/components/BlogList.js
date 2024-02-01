@@ -1,18 +1,38 @@
+// ProjectList.js
 import React from 'react';
 import BlogItem from './BlogItem';
+import projectsData from '../data/blogs.json'; 
 import '../index.css';
 
+const BlogList = () => {
+  const projects = projectsData; // Use the imported JSON data as your projects
 
-const BlogList = ({ blogs, content }) => {
-   if (!blogs || blogs.length === 0) {
-    return null;
+  if (!projects || projects.length === 0) {
+    return <p>No projects found.</p>;
   }
+
+  const groupProjectsByYear = projects.reduce((acc, project) => {
+    const year = new Date(project.projectDate).getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(project);
+    return acc;
+  }, {});
+
   return (
-    <div className='blogList-wrap'>
-      {blogs.map((blog) => (
-        <BlogItem blog={blog} content={content} key={blog.title}/>
+    <>
+      {Object.entries(groupProjectsByYear).map(([year, projects]) => (
+        <div key={year}>
+          <h2 className="my-4">{year}</h2>
+          <div className="row">
+            {projects.map(project => (
+              <BlogItem project={project} key={project.id} />
+            ))}
+          </div>
+        </div>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -1,30 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Chip from './Chip';
 import '../index.css';
 
-const BlogItem = ({ blog, content }) => {
-     if (!blog || !content ) {
+const BlogItem = ({ project }) => {
+  if (!project) {
     return null;
   }
+
   return (
-    <div className='blogItem-wrap' key={blog.title}>
-      <img className='blogItem-cover' src={blog.featured_image} alt='cover' />
-      <Chip label={blog?.tags[0]?.name} />
-      <h3>{blog.title}</h3>
-      <p className='blogItem-desc'>{blog.summary}</p>
-      <footer>
-        <div className='blogItem-author'>
-          <img src={blog.author.profile_image} alt='avatar' />
-          <div>
-            <h6>{blog.author.first_name+" "+blog.author.last_name}</h6>
-            <p>{blog.created_at}</p>
-          </div>
+    <div className="col-12 col-md-4 mb-4">
+      <div className='card'>
+        <img className='card-img-top' src={project.projectImage} alt='Project Cover' />
+        <div className='card-body'>
+          <h5 className='card-title'>{project.projectTitle}</h5>
+          <p className='card-text'>{project.description}</p>
+          <Link to={`/project/${project.id}`} className="btn btn-primary">
+            View Project
+          </Link>
         </div>
-        <Link className='blogItem-link' to={`/blog/${blog.title}`} onClick={()=>{content(blog)}}>
-          ➝
-        </Link>
-      </footer>
+      </div>
     </div>
   );
 };
