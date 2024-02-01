@@ -1,66 +1,34 @@
-import { React, useState, useEffect } from "react";
-import EmptyList from "../components/EmptyList";
-import BlogList from "../components/BlogList";
+// HomePage.js
+import React from 'react';
 import Header from "../components/Header";
-import SearchBar from "../components/SearchBar";
-import blogsData from '../data/blogs.json';
 
-const HomePage = ({ data }) => {
-  const [blogs, setBlogs] = useState([]);
-  const [searchKey, setSearchKey] = useState("");
-  
-  // get content from buttercms
-useEffect(() => {
-  setBlogs(blogsData);
-}, []);
+import BlogList from '../components/BlogList';
 
-
-  // Search submit
-  const handleSearchBar = (e) => {
-    e.preventDefault();
-    handleSearchResults();
+const HomePage = ({ blogs, content }) => {
+  // This function groups blogs by their publication year
+  const groupBlogsByYear = (blogs) => {
+    return blogs.reduce((acc, blog) => {
+      const year = new Date(blog.published).getFullYear();
+      if (!acc[year]) {
+        acc[year] = [];
+      }
+      acc[year].push(blog);
+      return acc;
+    }, {});
   };
 
-  // Search for blog by category
-const handleSearchResults = () => {
-  const filtered = blogsData.filter((blog) =>
-    blog.title.toLowerCase().includes(searchKey.toLowerCase())
-  );
-  setBlogs(filtered);
-};
-  // Clear search and show all blogs
-const handleClearSearch = () => {
-  setBlogs(blogsData);
-  setSearchKey("");
-};
-
-  // function to get selected blog content
-  const BlogContent = (id) => {
-    data(id);
-  };
+  const blogsByYear = groupBlogsByYear(blogs);
 
   return (
     <div>
-      {/* Page Header */}
-      <Header />
-      
+     <Header />
 
-      {/* Search Bar */}
-      <SearchBar
-        value={searchKey}
-        clearSearch={handleClearSearch}
-        formSubmit={handleSearchBar}
-        handleSearchKey={(e) => setSearchKey(e.target.value)}
-      />
-
-      {/* Blog List & Empty View */}
-      {!blogs.length ? (
-        <EmptyList />
-      ) : (
-        <BlogList blogs={blogs} content={BlogContent} />
-      )}
-
-      
+      {Object.keys(blogsByYear).map((year) => (
+        <section key={year}>
+          <h2>{year}</h2>
+          <BlogList blogs={blogsByYear[year]} content={content} />
+        </section>
+      ))}
     </div>
   );
 };
