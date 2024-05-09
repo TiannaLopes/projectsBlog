@@ -17,6 +17,7 @@ body {
   padding: 15px;
 }
 
+/* Projects page */
 .projects-container {
   position: relative;
   width: 100%;
@@ -37,6 +38,7 @@ body {
   margin: 10px 0;
   border-radius: 5px;
 }
+/* Contact page  */
 .contact-container {
   position: relative;
   width: 100%;
@@ -49,4 +51,53 @@ body {
   z-index: 2;
   padding: 20px;
   color: white;
+}
+
+/* Home page  */
+.homePageContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.text-light {
+  color: #fff;
+}
+
+.text-info {
+  color: #17a2b8;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+}
+
+.intro,
+.skills {
+  margin: 0 auto;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-top: 1px solid #fff;
 }
