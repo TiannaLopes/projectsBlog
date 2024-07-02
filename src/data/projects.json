@@ -1,12 +1,22 @@
 [
   {
     "id": 1,
-    "name": "Project One",
-    "description": "This is a brief description of Project One."
+    "name": "Oregon State University Ecampus Projects",
+    "description": "As an Analyst Programmer, I spearheaded the development of scalable applications using Vue.js and Bootstrap, resulting in a 30% improvement in web page load times. Contributed to over 7 courses by creating interactive web applications to enhance student learning of concepts. Maintained project statuses in Asana and Github, ensuring a 20% increase in project delivery efficiency. Researched emerging technologies, leading to a boost in the use of innovative media to improve instruction and knowledge transfer in online courses. Lead a Usability and Quality Assurance Task Force across the Course Development Training Department for over 3 different media teams and types."
   },
   {
     "id": 2,
-    "name": "Project Two",
-    "description": "This is a brief description of Project Two."
+    "name": "World Travel Holdings Projects",
+    "description": "As a Software Engineer, I developed responsive component-based applications and UI architecture with Angular2+ and ReactJS. Reduced bug-fixing efforts and improved development efficiency through reusable component libraries. Successfully resolved critical issues reported in AngularJS, Angular2+, and ReactJS, enhancing software reliability. Ensured web app compliance with W3C and 508 standards, enhancing accessibility for users. Efficiently integrated a third-party API into a Java Spring application for a company-wide project. Implemented new features such as email composition, editing, saving, and loading templates. Migrated legacy applications to Angular 11, enhancing the user experience."
+  },
+  {
+    "id": 3,
+    "name": "BookClub App",
+    "description": "A social platform for book enthusiasts to discuss and review books, built with React and Firebase. This app allows users to create book clubs, join discussions, and rate books. It features real-time updates, user authentication, and a recommendation system based on user preferences."
+  },
+  {
+    "id": 4,
+    "name": "SipStash",
+    "description": "An inventory management app for alcohol bottles, integrating with Firebase to help users keep track of their collection. Features include the ability to add new bottles by scanning barcodes, search and filter the inventory, and sort by various attributes like type, brand, and age. The app also allows users to rate their bottles and keep tasting notes."
   }
 ]
