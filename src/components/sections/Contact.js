@@ -1,5 +1,6 @@
 import React from 'react';
 import { profile } from '../../data/resume';
+import Reveal from '../core/Reveal';
 
 function Contact() {
   const links = [
@@ -36,26 +37,26 @@ function Contact() {
   ];
 
   return (
-    <section id='contact' className='section'>
+    <section id='contact' className='section section--alt'>
       <div className='container'>
-        <div className='section-header'>
+        <Reveal className='section-header'>
           <span className='section-label'>Contact</span>
           <h2 className='section-title'>Let's connect</h2>
           <p className='section-subtitle'>
             Open to collaborations, opportunities, and conversations about software development.
           </p>
-        </div>
+        </Reveal>
 
         <div className='contact-grid'>
-          <div>
+          <Reveal delay={80}>
             <p style={{ color: 'var(--color-text-muted)', lineHeight: 1.75 }}>
               Whether you're looking for a developer who understands both the technical and human
               side of software, or just want to say hello — I'd love to hear from you.
             </p>
-          </div>
+          </Reveal>
 
           <div className='contact-links'>
-            {links.map((link) => {
+            {links.map((link, index) => {
               const content = (
                 <>
                   <div className='contact-card__icon'>
@@ -70,22 +71,23 @@ function Contact() {
 
               if (link.href) {
                 return (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className='card contact-card'
-                    target={link.href.startsWith('http') ? '_blank' : undefined}
-                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  >
-                    {content}
-                  </a>
+                  <Reveal key={link.label} delay={120 + index * 70}>
+                    <a
+                      href={link.href}
+                      className='card contact-card'
+                      target={link.href.startsWith('http') ? '_blank' : undefined}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    >
+                      {content}
+                    </a>
+                  </Reveal>
                 );
               }
 
               return (
-                <div key={link.label} className='card contact-card'>
-                  {content}
-                </div>
+                <Reveal key={link.label} delay={120 + index * 70}>
+                  <div className='card contact-card'>{content}</div>
+                </Reveal>
               );
             })}
           </div>

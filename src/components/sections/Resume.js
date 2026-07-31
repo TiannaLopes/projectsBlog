@@ -7,6 +7,7 @@ import {
   skillGroups,
   interests,
 } from '../../data/resume';
+import Reveal from '../core/Reveal';
 
 function Resume() {
   const handlePrint = () => window.print();
@@ -16,15 +17,16 @@ function Resume() {
   return (
     <section id='resume' className='section'>
       <div className='container'>
-        <div className='section-header'>
+        <Reveal className='section-header'>
           <span className='section-label'>Resume</span>
           <h2 className='section-title'>Full resume</h2>
           <p className='section-subtitle'>
             A complete overview of my education, experience, and skills.
           </p>
-        </div>
+        </Reveal>
 
-        <div className='resume-document'>
+        <Reveal delay={100}>
+          <div className='resume-document'>
           <header className='resume-document__header'>
             <h2 className='resume-document__name'>{profile.name}</h2>
             <div className='resume-document__contact'>
@@ -120,12 +122,13 @@ function Resume() {
             </div>
           </div>
         </div>
+        </Reveal>
 
-        <div className='resume-actions no-print'>
+        <Reveal delay={180} className='resume-actions no-print'>
           <button type='button' className='btn btn-primary' onClick={handlePrint}>
             <i className='bi bi-printer' /> Print / Save as PDF
           </button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,16 +1,17 @@
 import React from 'react';
+import Reveal from '../core/Reveal';
 
 function About() {
   return (
     <section id='about' className='section'>
       <div className='container'>
-        <div className='section-header'>
+        <Reveal className='section-header'>
           <span className='section-label'>About</span>
           <h2 className='section-title'>Building software that makes a difference</h2>
-        </div>
+        </Reveal>
 
         <div className='about__grid'>
-          <div className='about__text'>
+          <Reveal className='about__text' delay={80}>
             <p>
               I'm a software developer with a passion for building engaging, accessible web
               applications. Currently an Analyst Programmer III at Oregon State University
@@ -23,21 +24,21 @@ function About() {
               React applications. I care deeply about user experience, communication, and writing
               code that's maintainable for the long term.
             </p>
-          </div>
+          </Reveal>
 
           <div className='about__highlights'>
-            <div className='card about__stat'>
-              <div className='about__stat-value'>50k+</div>
-              <div className='about__stat-label'>Students served via Group Finder Platform</div>
-            </div>
-            <div className='card about__stat'>
-              <div className='about__stat-value'>20+</div>
-              <div className='about__stat-label'>Interactive course applications delivered</div>
-            </div>
-            <div className='card about__stat'>
-              <div className='about__stat-value'>4.0</div>
-              <div className='about__stat-label'>GPA — Master's in Engineering Management</div>
-            </div>
+            {[
+              { value: '50k+', label: 'Students served via Group Finder Platform' },
+              { value: '20+', label: 'Interactive course applications delivered' },
+              { value: '4.0', label: "GPA — Master's in Engineering Management" },
+            ].map((stat, index) => (
+              <Reveal key={stat.value} delay={120 + index * 80}>
+                <div className='card about__stat'>
+                  <div className='about__stat-value'>{stat.value}</div>
+                  <div className='about__stat-label'>{stat.label}</div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </div>

@@ -1,18 +1,19 @@
 import React from 'react';
 import { education } from '../../data/resume';
+import Reveal from '../core/Reveal';
 
 function Education() {
   return (
     <section id='education' className='section'>
       <div className='container'>
-        <div className='section-header'>
+        <Reveal className='section-header'>
           <span className='section-label'>Education</span>
           <h2 className='section-title'>Academic background</h2>
-        </div>
+        </Reveal>
 
         <div className='education-grid'>
-          {education.map((item) => (
-            <article key={item.id} className='card education-card'>
+          {education.map((item, index) => (
+            <Reveal key={item.id} as='article' delay={index * 90} className='card education-card'>
               <h3 className='education-card__degree'>{item.degree}</h3>
               <p className='education-card__school'>{item.school}</p>
               <p className='education-card__meta'>
@@ -27,7 +28,7 @@ function Education() {
                   ))}
                 </div>
               )}
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
