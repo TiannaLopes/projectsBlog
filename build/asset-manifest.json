@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.723894d1.css",
-    "main.js": "/static/js/main.acebf003.js",
-    "static/js/453.170a010c.chunk.js": "/static/js/453.170a010c.chunk.js",
-    "static/media/osu-work-8.png": "/static/media/osu-work-8.768e76f0b66f94d5cd76.png",
-    "static/media/osu-work-1.png": "/static/media/osu-work-1.9990c1b0bf228c36ff77.png",
-    "static/media/osu-work-9.png": "/static/media/osu-work-9.4c567ad0a8c24333242c.png",
-    "static/media/osu-work-11.png": "/static/media/osu-work-11.638f4953bacb9e924ba1.png",
-    "static/media/osu-work-7.png": "/static/media/osu-work-7.18fa24bc8fbc22abc17d.png",
-    "static/media/osu-work-5.png": "/static/media/osu-work-5.c3e0850ab85e411a6fcb.png",
-    "static/media/osu-work-6.png": "/static/media/osu-work-6.cbebe6469bfd7739e537.png",
-    "static/media/osu-work-10.png": "/static/media/osu-work-10.023e1b92eba30aacca66.png",
-    "static/media/osu-work-3.png": "/static/media/osu-work-3.2aed18e7e0307e659445.png",
-    "static/media/osu-work-4.png": "/static/media/osu-work-4.e1b83f14a111825716c5.png",
-    "static/media/osu-work-2.png": "/static/media/osu-work-2.75ece58bb435f2f98b68.png",
-    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
-    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
-    "static/media/profile.jpeg": "/static/media/profile.8316a4ef553278157594.jpeg",
-    "index.html": "/index.html",
-    "main.723894d1.css.map": "/static/css/main.723894d1.css.map",
-    "main.acebf003.js.map": "/static/js/main.acebf003.js.map",
-    "453.170a010c.chunk.js.map": "/static/js/453.170a010c.chunk.js.map"
+    "main.css": "./static/css/main.ff281cf5.css",
+    "main.js": "./static/js/main.59dfbbbc.js",
+    "static/js/453.170a010c.chunk.js": "./static/js/453.170a010c.chunk.js",
+    "static/media/osu-work-8.png": "./static/media/osu-work-8.768e76f0b66f94d5cd76.png",
+    "static/media/osu-work-1.png": "./static/media/osu-work-1.9990c1b0bf228c36ff77.png",
+    "static/media/osu-work-9.png": "./static/media/osu-work-9.4c567ad0a8c24333242c.png",
+    "static/media/osu-work-11.png": "./static/media/osu-work-11.638f4953bacb9e924ba1.png",
+    "static/media/osu-work-7.png": "./static/media/osu-work-7.18fa24bc8fbc22abc17d.png",
+    "static/media/osu-work-5.png": "./static/media/osu-work-5.c3e0850ab85e411a6fcb.png",
+    "static/media/osu-work-6.png": "./static/media/osu-work-6.cbebe6469bfd7739e537.png",
+    "static/media/osu-work-10.png": "./static/media/osu-work-10.023e1b92eba30aacca66.png",
+    "static/media/osu-work-3.png": "./static/media/osu-work-3.2aed18e7e0307e659445.png",
+    "static/media/osu-work-4.png": "./static/media/osu-work-4.e1b83f14a111825716c5.png",
+    "static/media/osu-work-2.png": "./static/media/osu-work-2.75ece58bb435f2f98b68.png",
+    "static/media/bootstrap-icons.woff?": "./static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "./static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/profile.jpeg": "./static/media/profile.8316a4ef553278157594.jpeg",
+    "index.html": "./index.html",
+    "main.ff281cf5.css.map": "./static/css/main.ff281cf5.css.map",
+    "main.59dfbbbc.js.map": "./static/js/main.59dfbbbc.js.map",
+    "453.170a010c.chunk.js.map": "./static/js/453.170a010c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.723894d1.css",
-    "static/js/main.acebf003.js"
+    "static/css/main.ff281cf5.css",
+    "static/js/main.59dfbbbc.js"
   ]
 }
