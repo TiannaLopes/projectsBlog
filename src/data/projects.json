@@ -11,14 +11,27 @@
     "name": "Scheduling Platform",
     "organization": "Oregon State University Ecampus",
     "description": "Built a scalable Nuxt.js scheduling platform replacing a legacy PHP/React system, streamlining appointment coordination between professors and Lecture Media Coordinators.",
-    "tech": ["Nuxt.js", "Vue.js", "REST APIs"]
+    "tech": ["Nuxt.js", "Vue.js", "REST APIs"],
+    "images": ["osu-work-10"]
   },
   {
     "id": 3,
     "name": "Interactive Course Applications",
     "organization": "Oregon State University Ecampus",
     "description": "Designed and deployed customized interactive web applications for 20+ courses, improving student learning outcomes and engagement across diverse subject areas.",
-    "tech": ["Vue.js", "JavaScript", "Bootstrap"]
+    "tech": ["Vue.js", "JavaScript", "Bootstrap"],
+    "images": [
+      "osu-work-1",
+      "osu-work-2",
+      "osu-work-3",
+      "osu-work-4",
+      "osu-work-5",
+      "osu-work-6",
+      "osu-work-7",
+      "osu-work-8",
+      "osu-work-9",
+      "osu-work-11"
+    ]
   },
   {
     "id": 4,

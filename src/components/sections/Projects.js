@@ -1,6 +1,31 @@
 import React from 'react';
 import projectsData from '../../data/projects.json';
+import { osuImages, osuImageCaptions } from '../../data/osuImages';
 import Reveal from '../core/Reveal';
+
+function ProjectImages({ images }) {
+  if (!images?.length) return null;
+
+  const isGallery = images.length > 1;
+
+  return (
+    <div className={`project-card__media ${isGallery ? 'project-card__media--gallery' : ''}`}>
+      {images.map((key) => (
+        <figure key={key} className='project-card__figure'>
+          <img
+            src={osuImages[key]}
+            alt={osuImageCaptions[key] || 'OSU Ecampus project screenshot'}
+            className='project-card__image'
+            loading='lazy'
+          />
+          {isGallery && (
+            <figcaption className='project-card__caption'>{osuImageCaptions[key]}</figcaption>
+          )}
+        </figure>
+      ))}
+    </div>
+  );
+}
 
 function Projects() {
   return (
@@ -16,7 +41,13 @@ function Projects() {
 
         <div className='projects-grid'>
           {projectsData.map((project, index) => (
-            <Reveal key={project.id} as='article' delay={index * 70} className='card project-card'>
+            <Reveal
+              key={project.id}
+              as='article'
+              delay={index * 70}
+              className={`card project-card ${project.images?.length > 1 ? 'project-card--wide' : ''}`}
+            >
+              <ProjectImages images={project.images} />
               <p className='project-card__org'>{project.organization}</p>
               <h3 className='project-card__name'>{project.name}</h3>
               <p className='project-card__desc'>{project.description}</p>

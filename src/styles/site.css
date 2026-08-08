@@ -409,6 +409,54 @@
   gap: 1.5rem;
 }
 
+.project-card--wide {
+  grid-column: 1 / -1;
+}
+
+.project-card__media {
+  margin: -1.5rem -1.5rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+}
+
+.project-card__media:not(.project-card__media--gallery) .project-card__image {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-card__media--gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--color-border);
+}
+
+.project-card__figure {
+  margin: 0;
+  background: var(--color-bg);
+}
+
+.project-card__media--gallery .project-card__image {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-card__caption {
+  padding: 0.5rem 0.625rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  border-top: 1px solid var(--color-border);
+}
+
 .project-card__org {
   font-family: var(--font-mono);
   font-size: 0.75rem;
